@@ -85,6 +85,11 @@ dependencies {
     implementation 'com.github.bumptech.glide:glide:4.13.2'
     annotationProcessor 'com.github.bumptech.glide:compiler:4.13.2'
     implementation 'com.github.skydoves:transformationlayout:1.1.1'
+    implementation "androidx.room:room-runtime:2.4.3"
+    kapt "androidx.room:room-compiler:2.4.3"
+
+    // Kotlin Extensions and Coroutines support for Room
+    implementation "androidx.room:room-ktx:2.4.2"
 
     // UI Tests
     androidTestImplementation 'androidx.compose.ui:ui-test-junit4:1.2.1'
