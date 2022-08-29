@@ -5,6 +5,7 @@ import androidx.room.PrimaryKey
 
 @Entity
 data class AnimeListEntity(
+    val page: Int,
     val title: String,
     val imageUrl: String,
     val rating: String,
