@@ -7,8 +7,8 @@ import androidx.room.PrimaryKey
 data class AnimeListEntity(
     val page: Int,
     val title: String,
-    val imageUrl: String,
-    val rating: String,
-    val score: Float,
+    val imageUrl: String?,
+    val rating: String?,
+    val score: Float?,
     @PrimaryKey val id: Int? = null
 )

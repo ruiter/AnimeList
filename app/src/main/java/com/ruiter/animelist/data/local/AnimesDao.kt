@@ -11,6 +11,9 @@ interface AnimesDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insertAnimeList(animes: List<AnimeListEntity>)
 
-    @Query("SELECT * FROM AnimeListEntity WHERE page = :page_")
+    @Query("SELECT * FROM animeListEntity WHERE page = :page_")
     suspend fun getAnimeList(page_: Int): List<AnimeListEntity>
+
+    @Query("DELETE FROM animelistentity")
+    suspend fun clearLocalAnimeListEntity()
 }
