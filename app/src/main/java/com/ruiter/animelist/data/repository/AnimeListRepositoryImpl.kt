@@ -52,7 +52,7 @@ class AnimeListRepositoryImpl @Inject constructor(val animeApi: AnimeApi, val db
             responseResult?.let { animesList ->
                 dao.clearLocalAnimeListEntity()
                 dao.insertAnimeList(animesList.map { it.toAnimesListEntity(page) })
-                
+
                 emit(Resource.Success(data = animesList))
                 emit(Resource.Loading(false))
             }
